@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // listing all integers to be used
+    // givennum is the number to be input
+    int num, g, givennum, sum = 0;
+
+    //Enter the end number of the sum of the sum of prime numbers
+    cout <<"Find the sum of prime numbers upto : ";
+    cin >> givennum;
+
+    for(num = 2; num <= givennum; num++) {
+        for(g = 2; g <= (num / 2); g++){
+            if(num % g == 0) {
+                g = num;
+                break;
+            }
+        }
+    }
+
+    //Adding of numbers when prime
+    if(g != num) {
+        sum += num;
+        
+    }
+}
+cout << enl << "sum of the prime numbers upto" <<givennum << ":" << sum;
+
+return 0
+// Vera Elorm Klutse developed this program
+// ID: 10957391
